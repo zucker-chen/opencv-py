@@ -6,6 +6,6 @@
 ## PyCharm + github
 * commit error:`no tracked branch`
     * success: `git push --set-upstream origin master`
-
-
+* commit success, but remote(github) not update
+    * need commit + push
 
