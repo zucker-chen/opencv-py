@@ -17,11 +17,21 @@ def access_pixels(img):
                 img[row, col, ch] = 255 - pv
     cv.imshow("pixels img", img)
 
-src = cv.imread(r"C:\Users\Administrator\Pictures\ye.jpg")
+def net_imread(url):
+    cap = cv.VideoCapture(url)
+    ret, frame = cap.read()
+    if ret == False:
+        return False
+    else:
+        return frame
+
+
+# src = cv.imread(r"C:\Users\Administrator\Pictures\ye.jpg")
+src = net_imread(r"https://preview.qiantucdn.com/58pic/35/32/48/60Y58PICu92fF78h1va39_PIC2018.jpg!w1024_new_small")
 cv.namedWindow("image", cv.WINDOW_AUTOSIZE)
 cv.imshow("image", src)
 img_info(src)
-access_pixels(src)
+# access_pixels(src)
 cv.waitKey(0)
 cv.destroyAllWindows()
 
