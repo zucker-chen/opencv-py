@@ -1,11 +1,5 @@
 import cv2.cv2 as cv
 
-
-
-
-
-
-
 def net_imread(url):
     cap = cv.VideoCapture(url)
     ret, frame = cap.read()
@@ -16,6 +10,7 @@ def net_imread(url):
 
 def img_add_weight(img, conrast, alpha):
     return cv.addWeighted(img, conrast, False, False, alpha)
+
 
 def img_calc(img1, img2, method):
     if method == "add":
@@ -34,6 +29,7 @@ def img_calc(img1, img2, method):
         return cv.bitwise_not(img1, img2)
     else:
         return False
+
 
 # main
 # cv.namedWindow("img1", cv.WINDOW_AUTOSIZE)
