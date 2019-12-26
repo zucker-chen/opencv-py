@@ -30,20 +30,34 @@ def img_custom_blur(img):
     cv.imshow("custom blur", dst)
 
 
+# 高斯滤波
 def img_gaussian_blur(img):
     # dst = cv.GaussianBlur(img, (0, 0), 15)  # sigma
     dst = cv.GaussianBlur(img, (5, 5), 0)  # x
     cv.imshow("gasuss blur", dst)
 
 
+# 边沿保留滤波（EPF）- 高斯双边滤波
+def img_bilateral_filter(img):
+    dst = cv.bilateralFilter(img, 0, 30, 3)
+    cv.imshow("bilateral filter", dst)
 
-src = net_imread(r"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3593466601,372981957&fm=26&gp=0.jpg")
+
+# 边沿保留滤波（EPF）- 均值迁移
+def img_meanshift_filter(img):
+    dst = cv.pyrMeanShiftFiltering(img, 3, 30)
+    cv.imshow("meanshift", dst)
+
+# src = net_imread(r"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3593466601,372981957&fm=26&gp=0.jpg")
+src = net_imread(r"http://upload.taihainet.com/2016/0917/1474098004187.jpg")
 cv.namedWindow("image", cv.WINDOW_AUTOSIZE)
 cv.imshow("image", src)
 img_blur(src)
 img_medianblur(src)
 img_custom_blur(src)
 img_gaussian_blur(src)
+img_bilateral_filter(src)
+img_meanshift_filter(src)
 cv.waitKey(0)
 cv.destroyAllWindows()
 
