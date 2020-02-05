@@ -9,3 +9,13 @@
 * commit success, but remote(github) not update
     * need commit + push
 
+## github 代码提交快捷键
+* 提交到本地仓库  
+    1. ctrl + k   
+    2. 添加修改日志  
+    3. 点击`commit`按钮即可  
+* 提交到远程仓库  
+    1. ctrl + k  
+    2. 添加修改日志  
+    3. ctrl + alt + k 
+    4. 点击提交按钮即可    

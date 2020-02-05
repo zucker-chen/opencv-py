@@ -1,10 +1,13 @@
 import cv2.cv2 as cv
 
 def img_info(img):
-    h = img.shape[0]
-    w = img.shape[1]
+    w = img.shape[0]
+    h= img.shape[1]
     c = img.shape[2]
-    print(h, w, c)
+    print(w, h, c)
+    print(img.shape)
+    print(img.shape[:1])
+    print(img.shape[:2])
 
 def access_pixels(img):
     h = img.shape[0]
