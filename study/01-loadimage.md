@@ -14,3 +14,11 @@
     * `w = img.shape[0]`  
     * `h= img.shape[1]`  
     * `c = img.shape[2]`  
+
+#### 图片各通道拆分及合并
+```python
+    r, g, b = cv.split(img))
+    img[:, :, 1] = 0
+    img[:, :, 2] = 0
+    bgr = cv.merge([b, g, r])
+```

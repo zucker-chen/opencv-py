@@ -9,6 +9,9 @@
 * commit success, but remote(github) not update
     * need commit + push
 
+## PyCharm markdown支持粘贴图片
+先安装官方推荐的Markdown support插件，再安装Paste images into MarkDown
+
 ## github 代码提交快捷键
 * 提交到本地仓库  
     1. ctrl + k   
