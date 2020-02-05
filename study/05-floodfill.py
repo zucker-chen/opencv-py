@@ -5,9 +5,9 @@ import numpy as np
 
 def fill_color_demo(image):
     copyIma = image.copy()
-    h, w = image.shape[:2]
-    print(h, w)
-    mask = np.zeros([h+2, w+2], np.uint8)
+    w, h = image.shape[:2]
+    print(w, h)
+    mask = np.zeros([w+2, h+2], np.uint8)
     cv.floodFill(copyIma, mask, (30, 30), (0, 255, 255), (50, 50, 50), (50, 50, 50), cv.FLOODFILL_FIXED_RANGE)
     # cv.floodFill(copyIma, mask, (30, 30), (0, 255, 255), (20, 20, 10), (20, 20, 20))
     cv.imshow("fill_color", copyIma)
