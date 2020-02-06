@@ -1,9 +1,9 @@
 import cv2.cv2 as cv
 
 def img_info(img):
-    w = img.shape[0]
-    h= img.shape[1]
-    c = img.shape[2]
+    h = img.shape[0]    # 高
+    w= img.shape[1]     # 宽
+    c = img.shape[2]    # 通道
     print(w, h, c)
     print(img.shape)
     print(img.shape[:1])
