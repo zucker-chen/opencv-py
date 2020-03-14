@@ -9,8 +9,15 @@
 * commit success, but remote(github) not update
     * need commit + push
 
-## PyCharm markdown支持粘贴图片
+## PyCharm环境配置
+#### PyCharm markdown支持粘贴图片
 先安装官方推荐的Markdown support插件，再安装Paste images into MarkDown
+#### PyCharm 执行代码报错，用命令行正常
+```
+new_code = types.CodeType(len(varnames),
+TypeError: an integer is required (got type bytes)
+```
+解决： 是pycharm 与 python的版本不匹配，更新最新pycharm就行
 
 ## github 代码提交快捷键
 * 提交到本地仓库  
